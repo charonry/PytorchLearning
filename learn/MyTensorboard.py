@@ -2,7 +2,7 @@ from torch.utils.tensorboard import SummaryWriter
 import numpy as np
 from PIL import Image
 """
-tensorboard --logdir=logs --port=6006 (默认端口)
+tensorboard --logdir=logs --port=6006 (默认端口) --reload_interval=5 (刷新频率)
 """
 writer = SummaryWriter("logs")
 # 1.标量数值读取
