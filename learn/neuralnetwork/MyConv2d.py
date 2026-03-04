@@ -28,9 +28,9 @@ writer = SummaryWriter("logs")
 step = 0
 for data in dataloader:
     imgs, target = data
-    output = myModule(imgs)
     # torch.Size([64, 3, 32, 32])
     writer.add_images("input", imgs, step)
+    output = myModule(imgs)
     # torch.Size([64, 6, 30, 30])
     output = torch.reshape(output, (-1, 3, 30, 30))
     writer.add_images("output", output, step)
